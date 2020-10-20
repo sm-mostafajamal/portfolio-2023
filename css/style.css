@@ -1,0 +1,16 @@
+body {
+    background-color: #f1f6f9;
+    text-align: center;
+    margin: 0;
+}
+.intro {
+    margin-top: 25rem;
+    font-size: 50px;
+    text-align: center;
+    color: #394867;
+    display: inline-block;
+}
+
+.name {
+    color: #14274e;
+}
