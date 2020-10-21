@@ -7,10 +7,16 @@ body{
 }
 
 .intro {
-    font-size: 30px;
+    font-size: 40px;
     color: wheat;
-    padding-top: 25%;
+    padding-top: 20%;
     font-family: 'Raleway', sans-serif;
+}
+#icon{
+  position: relative;
+  margin: 2rem 80rem 0 0;
 }#name{
     font-family: 'Tangerine', cursive;
+
 }
+    
