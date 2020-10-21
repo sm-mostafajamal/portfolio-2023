@@ -1,18 +1,30 @@
 body {
-    background-color: #f1f6f9;
     text-align: center;
     margin: 0;
+}
+
+
+/* First page */
+.top-container {
+    background-color: #f1f6f9;
+ 
 }
 .intro {
     margin-top: 25rem;
     font-size: 50px;
     text-align: center;
-    color: #9ba4b4;
+    color:  #394867;/* #9ba4b4 */
     display: inline-block;
     font-family: 'Poiret One', cursive;
+
 }
 
 .name {
     color: #14274e;
     font-family: 'Lobster', cursive;
+}
+
+.copyright{
+    position: relative;
+    margin: 18rem auto 0 auto;
 }
