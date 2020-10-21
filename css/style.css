@@ -1,22 +1,37 @@
 body{
     margin: 0;
-    text-align: center;
+        
+}
+.container{
+    height: 100%;
+    width: 100%;
     background-image:url('/images/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    position: absolute;
 }
-
+/* .email{
+    font-size: 20px;
+    color: wheat;
+    margin-top: 50%;
+    font-family: 'Raleway', sans-serif;
+} */
 .intro {
     font-size: 40px;
     color: wheat;
     padding-top: 20%;
     font-family: 'Raleway', sans-serif;
+    text-align: center;
 }
 #icon{
-  position: relative;
-  margin: 2rem 80rem 0 0;
+    /* position: absolute; */
+    width: 50px;
+    margin: 40px 0 0 40px;
+    display: inline;
 }#name{
     font-family: 'Tangerine', cursive;
+    color: #f05d23;
 
 }
+
     
