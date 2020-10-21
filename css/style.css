@@ -1,6 +1,6 @@
 body{
     margin: 0;
-        
+    text-align: center;
 }
 .container{
     height: 100%;
@@ -10,28 +10,19 @@ body{
     background-size: cover;
     position: absolute;
 }
-/* .email{
-    font-size: 20px;
-    color: wheat;
-    margin-top: 50%;
-    font-family: 'Raleway', sans-serif;
-} */
+
 .intro {
     font-size: 40px;
     color: wheat;
-    padding-top: 20%;
+    padding-top: 25%;
     font-family: 'Raleway', sans-serif;
-    text-align: center;
-}
-#icon{
-    /* position: absolute; */
-    width: 50px;
-    margin: 40px 0 0 40px;
+
+}#icon{
+    width: 60px;
     display: inline;
 }#name{
     font-family: 'Tangerine', cursive;
     color: #f05d23;
-
 }
 
     
