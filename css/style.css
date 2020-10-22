@@ -2,27 +2,47 @@ body{
     margin: 0;
     text-align: center;
 }
+/* Top Container */
 .container{
     height: 100%;
     width: 100%;
-    background-image:url('/images/background.jpg');
+    background-image:url('../images/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
-}
-
-.intro {
+}.intro {
     font-size: 40px;
     color: wheat;
     padding-top: 25%;
     font-family: 'Raleway', sans-serif;
 
-}#icon{
+}#icon {
     width: 60px;
     display: inline;
+    padding-top: 25%;
+    color: aliceblue;
 }#name{
     font-family: 'Tangerine', cursive;
     color: #f05d23;
 }
 
+/* Mid Container */
+.about{
+    font-size: 3rem;
+    padding-top: 50px ;
+    margin-bottom: 0;
+    color:black
     
+}#about-me {
+    font-size: 2rem;
+}hr {
+    width: 10%;
+    border: dotted #dbe2ef 10px;
+    border-bottom: none;
+    margin-top: 0;
+
+}.mid-container{
+    background-color: #f9f7f7;
+    height: 100%;
+    width: 100%;
+}
