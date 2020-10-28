@@ -1,3 +1,8 @@
+/* @media only screen {
+    #pp {
+        float: none;
+    }
+} */
 body{
     margin: 0;
     text-align: center;
@@ -9,6 +14,7 @@ body{
     background-image:url('../Images/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    /* text-align: center; */
     position: absolute;
 }.intro {
     font-size: 1.7rem;
@@ -29,14 +35,23 @@ body{
 }
 
 /* Mid Container */
+.about{
+    font-size: 3rem;
+    padding: 10% 0 0 52%;
+    display: inline-block;
+    font-family: 'Montserrat Alternates', sans-serif;
+    color:#c9d6df    
+}
 .right-line {
     width: 60%;
-    margin: 10px 14% 0 auto;
+    margin: 2% 0 0 12%;
     border: thin  #52616b 1px;
+    display: inline-block;
     border-bottom: none;
 }
 .bio {
     width: 40%;
+    height: auto;
     padding: 5% 0 0 0;
     line-height: 2rem;
     color: #f0f5f9;
@@ -48,12 +63,6 @@ body{
     height: 100%;
     width: 100%;
     background-color: black;
-}.about{
-    font-size: 3rem;
-    margin: 10% 0 0 41rem;
-    display: inline-block;
-    font-family: 'Montserrat Alternates', sans-serif;
-    color:#c9d6df    
 }#pp {
     width: 25%;
     float: right;
@@ -61,13 +70,14 @@ body{
     margin-right: 13%;
 }.skills{
     font-size: 3rem;
-    margin: 5rem 24.5rem 0 0;
+    margin: 5% 70% 0 0;
     display: inline-block;
     font-family: 'Montserrat Alternates', sans-serif;
     color:#c9d6df    
 }.left-line {
     width: 60%;
-    margin: 10px 0 0 10.5%;
+    margin: 2% 19% 0 0;
     border: thin  #52616b 1px;
     border-bottom: none;
+    display: inline-block;
 }
