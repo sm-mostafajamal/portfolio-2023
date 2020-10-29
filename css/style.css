@@ -122,5 +122,7 @@ body{
         font-size: larger;
     }.left-line{
         margin-right: 18%;
+    }.skills-info{
+        font-size: 10px;
     }
   } 
