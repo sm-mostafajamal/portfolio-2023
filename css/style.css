@@ -1,8 +1,8 @@
-/* @media only screen {
-    #pp {
-        float: none;
+/* @media screen and (min-width: 480px) {
+    .mid-container {
+      background-color: orange;
     }
-} */
+  } */
 body{
     margin: 0;
     text-align: center;
@@ -36,11 +36,12 @@ body{
 
 /* Mid Container */
 .about{
-    font-size: 3rem;
-    padding: 10% 0 0 52%;
+    color:#c9d6df; 
     display: inline-block;
+    font-size: 3rem;
+    margin: 0;
+    padding: 10% 0 0 52%;
     font-family: 'Montserrat Alternates', sans-serif;
-    color:#c9d6df    
 }
 .right-line {
     width: 60%;
@@ -52,7 +53,7 @@ body{
 .bio {
     width: 40%;
     height: auto;
-    padding: 5% 0 0 0;
+    padding: 5% 0 0 4%;
     line-height: 2rem;
     color: #f0f5f9;
     display: inline-block;
@@ -69,15 +70,19 @@ body{
     padding-top: 50px;
     margin-right: 13%;
 }.skills{
-    font-size: 3rem;
-    margin: 5% 70% 0 0;
+    color:#c9d6df;
     display: inline-block;
-    font-family: 'Montserrat Alternates', sans-serif;
-    color:#c9d6df    
+    font-size: 3rem;
+    text-align: left;
+    margin: 5% 65% 0 0;
+    font-family: 'Montserrat Alternates', sans-serif;     
 }.left-line {
-    width: 60%;
-    margin: 2% 19% 0 0;
     border: thin  #52616b 1px;
     border-bottom: none;
     display: inline-block;
+    width: 60%;
+    margin: 2% 14% 0 0;
+    
+    
+    
 }
