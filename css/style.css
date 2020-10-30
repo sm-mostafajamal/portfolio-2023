@@ -30,7 +30,8 @@ html{
 .nav-zone:hover{
     box-shadow: 2px 1px 5px  #eeeeee;
     border-radius: 1.5rem;
-    cursor: pointer;   
+    cursor: pointer;
+    transition: all 1s;   
 }.nav-bar{
     width: 75%;
     background-color: black;
