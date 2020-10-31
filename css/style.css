@@ -9,7 +9,6 @@ html{
     background-image:url('../Images/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    /* position: absolute; */
 }
 /* =========================== Top Container =========================*/
 .intro {
@@ -89,14 +88,7 @@ html{
     display: inline-block;
     font-size: 3rem;
     font-family: 'Montserrat Alternates', sans-serif;
-}
-.right-line, .left-line{
-    width: 60%;
-    border-bottom: none;
-    border: thin  #52616b 1px;
-    display: inline-block;
-}
-.about-icon{
+}.about-icon{
     margin: 0;
     padding:5% 0 0 66%;
 }.bio, .skills-info{
@@ -109,6 +101,11 @@ html{
     display: inline-block;
     padding: 5% 0 0 13%;
     line-height: 2rem;
+}.right-line, .left-line{
+    width: 60%;
+    border-bottom: none;
+    border: thin  #52616b 1px;
+    display: inline-block;
 }.right-line {
     margin: 2% 0 0 26%;
 }.left-line {
@@ -131,6 +128,12 @@ html{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     width: 60%;
+
+}.grid-item{
+    list-style: none;
+}.fab, .fas {
+    font-size: 2rem;
+    margin-right: 10%;
 }
 /*============================= for mobile devices ================================*/
 @media only screen and (max-width: 600px) {
