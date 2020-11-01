@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" media="all" href="css/style.css">
     <link rel="icon" href="./Images/favicon.ico">
@@ -12,29 +11,28 @@
 </head>
 <body>
     
-    <div class="container">
-        <section id='introduction'>
-            <div class="top-container">
+    <main class="container">
+        <header id='introduction'>
+            <section class="top-container">
                 <p class="intro"><em id="name">I'm Syed M. Mostafa Jamal.</em>
                     <br>a front-end software developer.</p>   
                 <img id="icon" src="./Images/myicon.png" alt="icon">
-            </div> 
-        </section>
+            </section> 
+        </header>
         <section id="about-me">
-            <div class="mid-container">
                 <nav class="nav-zone">
                     <ul class="nav-bar">
-                        <li><span id="home"><a href="#">Home</a></span></li>
+                        <li><a class="home-btn" href="#">Home</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Portfolio</a></li>
                         <li><a href="#">Contact</a></li>
-                        <li id="resume"><a href="#"> <span>  Resume </span></a></li>
+                        <li id="resume-btn"><a href="#"> <span>  Resume </span></a></li>
                     </ul>
                 </nav>
                 <div class="bio-container">
                     <h1 class="about-icon">About Me</h1><hr class="right-line">
                     <img id="pp" src="./Images/pp.png" alt="profile-picture">
-                    <div class="bio">
+                    <article class="bio">
                         <p>Hi, I'm Mostafa. I'm a web developer with a passion for front end development combining beautiful code with beautiful design.
                             I'm currently a third year student at International Islamic University, Chittagong pursuing Bsc. in Computer Science and engineering.
                             I aspire toward a career that will allow me to channel my creativity through
@@ -43,10 +41,10 @@
                             When I'm not in front of a computer screen, I'm probably hangout with friends, take a tour with friends,
                             or do something that interest me. 
                         </p>
-                    </div>
+                    </article>
                 </div>
                 <div class="skill-container">
-                    <div class="skills-info">
+                    <article class="skills-info">
                         <h1 class="skill-icon">Skills</h1>
                         <hr class="left-line">
                         <p>Some tech i've been working with: </p>
@@ -66,10 +64,9 @@
                                 <li><i class="fab fa-python"></i>seaborn</li>
                             </ul> 
                         </div>
-                    </div>
+                    </article>
                 </div>
-            </div>
         </section>
-    </div>
+    </main>
 </body>
 </html>

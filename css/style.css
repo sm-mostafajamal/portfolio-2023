@@ -47,50 +47,60 @@ html{
     color:#d6e6f2;
 } a:hover{
     color: white;
-}#home{
+    font-size: 1.3rem;
+    transition: all 0.5s; 
+}.home-btn{
     border: 1px solid white;
     background-color: inherit;
     padding: 2px 7px;
     font-size: 1rem;
     display: inline-block;
-}#home:hover{
-    background-color: inherit;
+}
+.home-btn:hover{
+    background-color: whitesmoke;
     font-size: 1.2rem;
-    transition: all 0.5s;  
-}#resume {
+    transition: all 0.5s; 
+    color: black;
+}
+#resume-btn {
     color: #c9d6df;
     font-size: 1.5rem;
     transition: all 0.5s;
     cursor: pointer;
     margin-left: auto;
-  }#resume span {
+  }#resume-btn span {
     display: inline-block;
     position: relative;
     transition: 0.5s;
-  }#resume span:after {
+  }#resume-btn span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
     top: 0;
     right: -20px;
     transition: 0.5s;
-  }#resume:hover span {
+  }#resume-btn:hover span {
     padding-right: 25px;
   }
-  #resume:hover span:after {
+  #resume-btn:hover span:after {
     opacity: 1;
     right: 0;
   }
   
 /*======================= bio ============================*/
-.about-icon, .skill-icon{
+#about-me{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    text-align: left;
+}.about-icon, .skill-icon{
     color:#c9d6df; 
     display: inline-block;
     font-size: 3rem;
     font-family: 'Montserrat Alternates', sans-serif;
 }.about-icon{
     margin: 0;
-    padding:5% 0 0 66%;
+    padding:2% 0 0 66%;
 }.bio, .skills-info{
     color: #f0f5f9;
     font-size: 1rem;
@@ -110,11 +120,6 @@ html{
     margin: 2% 0 0 26%;
 }.left-line {
     margin: 2% 14.5% 0 0;  
-}.mid-container{
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    text-align: left;
 }#pp {
     width: 25%;
     float: right;
@@ -128,7 +133,6 @@ html{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     width: 60%;
-
 }.grid-item{
     list-style: none;
 }.fab, .fas {
