@@ -40,7 +40,7 @@ html{
     padding: 0.1rem;
     list-style: none;
     margin-bottom: 0;
-    margin: 6.8rem 0 0 12%;
+    margin: 10rem 0 0 12%;
 }li{
     padding: 1% 2% 1% 2%; 
 }a{
@@ -99,14 +99,14 @@ h1{
     border: none ;
     height: 1px;
 }
-#about-icon, #protfolio-icon{
+#about-icon, #protfolio-icon, #contact-icon{
     color:#c9d6df; 
     display: inline-block;
     font-size: 4rem;
     font-family: 'Montserrat Alternates', sans-serif;
 }#about-icon{
-    padding-left:65%;
-}.bio-container{
+    padding-left:61%;
+}.bio-container, #portfolio{
     width: 80%;
     height: auto;
     color: #f0f5f9;
@@ -114,8 +114,6 @@ h1{
     font-family: 'Montserrat', sans-serif;
     display: inline-block;
     line-height: 1.7rem;
-}#portfolio-icon{
-    margin: 0 65% 0 0;   
 }
 .right-line, .left-line{
     width: 80%;
@@ -123,9 +121,7 @@ h1{
     border: thin  #52616b 1px;
     display: inline-block;
 }.right-line {
-    margin-left:15%;
-}.left-line {
-    margin-right:14.5%;  
+    margin-left:11%;
 }#pp {
     width: 35%;
     float: right;
@@ -151,6 +147,11 @@ h1{
     font-size: 1rem;
 }
 /* ============================ Portfolio ========================================= */
+#protfolio-icon{
+    padding-right: 56rem;
+}.left-line {
+    margin-right:20%;  
+}
 /* ============================= Contact =========================================== */
 /*============================= for mobile devices ================================*/
 @media only screen and (max-width: 600px) {
