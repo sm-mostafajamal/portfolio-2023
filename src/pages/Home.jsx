@@ -23,8 +23,7 @@ const Resume = styled.button`
   color: white;
   padding: 10px;
   background-color: transparent;
-  border: 1px solid #d35100;
-
+  border: 1px solid #d351006b;
   border-radius: 5px;
   font-weight: 500;
   font-size: 14px;
@@ -53,7 +52,7 @@ const Wrapper = styled.div`
   text-align: center;
 `;
 const Icon = styled.div`
-  border: 0.5px solid #303436;
+  border: 0.5px solid #ffffff52;
   border-radius: 50%;
   color: #e8e6e3;
   font-family: "Rubik Wet Paint", cursive;
@@ -70,19 +69,18 @@ const Title = styled.h1`
   font-family: "Josefin Slab", serif;
   color: white;
   font-weight: 300;
-  border-top: 0.1px solid #303436;
-  border-bottom: 0.1px solid #303436;
+  border-top: 0.1px solid #ffffff52;
+  border-bottom: 0.1px solid #ffffff52;
   padding: 50px;
   /* margin: 50px; */
   font-size: 2.5rem;
 `;
 const Navbar = styled.ul`
-  width: 30%;
   color: white;
   display: flex;
   justify-content: space-around;
   padding: 0;
-  border: 0.1px solid #303436;
+  border: 0.1px solid #ffffff52;
   border-radius: 5px;
   cursor: pointer;
 `;
@@ -93,10 +91,10 @@ const List = styled.li`
   font-size: 13px;
   font-weight: 500;
   color: #c8c6c4;
-  padding: 15px;
+  padding: 10px 20px;
 `;
 const Bar = styled.span`
-  border-right: 0.1px solid #303436;
+  border-right: 0.1px solid #ffffff52;
   /* rgba(24, 26, 27, 0.07) */
 `;
 const Name = styled.span`
@@ -119,10 +117,10 @@ const SocialIcon = styled.span`
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 0.5px solid #303436;
+  border: 0.5px solid #ffffff52;
   border-radius: 50%;
-  height: 50px;
-  width: 50px;
+  height: 35px;
+  width: 35px;
 `;
 const Home = () => {
   return (
@@ -151,16 +149,16 @@ const Home = () => {
         </Navbar>
         <SocialIcons>
           <SocialIcon>
-            <LinkedIn />
+            <LinkedIn style={{ fontSize: "20px" }} />
           </SocialIcon>
           <SocialIcon>
-            <GitHub />
+            <GitHub style={{ fontSize: "20px" }} />
           </SocialIcon>
           <SocialIcon>
-            <Facebook />
+            <Facebook style={{ fontSize: "20px" }} />
           </SocialIcon>
           <SocialIcon>
-            <Instagram />
+            <Instagram style={{ fontSize: "20px" }} />
           </SocialIcon>
         </SocialIcons>
       </Wrapper>
