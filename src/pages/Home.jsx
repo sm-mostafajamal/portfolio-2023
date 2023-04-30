@@ -100,6 +100,7 @@ const Bar = styled.span`
 const Name = styled.span`
   font-family: "Sacramento", cursive;
   color: #d35100;
+  /* color: teal; */
   font-weight: bold;
 `;
 const Bottom = styled.span`
