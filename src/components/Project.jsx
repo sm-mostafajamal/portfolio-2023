@@ -1,5 +1,13 @@
 import styled from "styled-components";
-
+const Image = styled.img`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 5px;
+  object-fit: cover;
+  bottom: 20px;
+  right: 20px;
+`;
 const Container = styled.div`
   width: 100%;
   position: relative;
@@ -20,15 +28,7 @@ const ImageContainer = styled.div`
   border-radius: 5px;
   /* flex: 1; */
 `;
-const Image = styled.img`
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  border-radius: 5px;
-  bottom: 20px;
-  right: 20px;
-  object-fit: cover;
-`;
+
 const AboutProject = styled.div`
   color: white;
   background-color: #242424c9;

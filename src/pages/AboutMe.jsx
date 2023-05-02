@@ -80,7 +80,10 @@ const Skill = styled.li`
   border-radius: 5px;
   font-weight: 500;
 `;
-const Icons = styled.div``;
+const Icons = styled.div`
+  color: white;
+  font-size: 50px;
+`;
 
 const AboutMe = () => {
   return (

@@ -1,12 +1,6 @@
-import {
-  DarkModeOutlined,
-  Facebook,
-  GitHub,
-  Instagram,
-  LinkedIn,
-  WbSunnyOutlined,
-} from "@mui/icons-material";
+import { DarkModeOutlined, WbSunnyOutlined } from "@mui/icons-material";
 import styled from "styled-components";
+import SocialApp from "../components/SocialApps";
 
 const Container = styled.div`
   height: 100vh;
@@ -107,22 +101,7 @@ const Bottom = styled.span`
   font-size: 22px;
   font-family: "Josefin Slab", serif;
 `;
-const SocialIcons = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 20%;
-  color: white;
-`;
-const SocialIcon = styled.span`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 0.5px solid #ffffff52;
-  border-radius: 50%;
-  height: 35px;
-  width: 35px;
-`;
+
 const Home = () => {
   return (
     <Container>
@@ -148,20 +127,7 @@ const Home = () => {
           <Bar />
           <List>contact</List>
         </Navbar>
-        <SocialIcons>
-          <SocialIcon>
-            <LinkedIn style={{ fontSize: "20px" }} />
-          </SocialIcon>
-          <SocialIcon>
-            <GitHub style={{ fontSize: "20px" }} />
-          </SocialIcon>
-          <SocialIcon>
-            <Facebook style={{ fontSize: "20px" }} />
-          </SocialIcon>
-          <SocialIcon>
-            <Instagram style={{ fontSize: "20px" }} />
-          </SocialIcon>
-        </SocialIcons>
+        <SocialApp />
       </Wrapper>
     </Container>
   );
