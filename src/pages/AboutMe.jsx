@@ -1,10 +1,12 @@
 import styled from "styled-components";
 import Title from "../components/Title";
+import Icons from "../components/Icons";
 
 const Container = styled.div`
   height: 100vh;
-  background-color: #151515;
-  /* background-color: black; */
+  /* background-color: white; */
+  /* background-color: #151515; */
+  background-color: black;
 
   display: flex;
   flex-direction: column;
@@ -12,7 +14,11 @@ const Container = styled.div`
 
 const DetailsWrapper = styled.div`
   width: 80%;
+  /* height: 90vh; */
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 const Wrapper = styled.div`
   display: flex;
@@ -48,10 +54,7 @@ const Image = styled.img`
   height: 100%;
   object-fit: cover;
   border-radius: 5px;
-
   position: absolute;
-  /* top: 0; */
-  /* left: 0; */
   bottom: 10px;
   right: 10px;
 `;
@@ -79,10 +82,6 @@ const Skill = styled.li`
   margin: 10px;
   border-radius: 5px;
   font-weight: 500;
-`;
-const Icons = styled.div`
-  color: white;
-  font-size: 50px;
 `;
 
 const AboutMe = () => {
@@ -131,8 +130,8 @@ const AboutMe = () => {
             </ImageContainer>
           </Wrapper>
         </About>
-        <Icons></Icons>
       </DetailsWrapper>
+      <Icons />
     </Container>
   );
 };
