@@ -94,7 +94,7 @@ const Project = ({ project, direction }) => {
         <Technologies
           direction={cardDirection}
           style={{
-            "padding-top": "10px",
+            paddingTop: "10px",
             color: "rgba(0, 196, 196, 0.747)",
           }}
         >

@@ -1,6 +1,6 @@
 import { DarkModeOutlined, WbSunnyOutlined } from "@mui/icons-material";
 import styled from "styled-components";
-import SocialApp from "../components/SocialApps";
+import SocialApps from "../components/SocialApps";
 
 const Container = styled.div`
   height: 100vh;
@@ -127,7 +127,7 @@ const Home = () => {
           <Bar />
           <List>contact</List>
         </Navbar>
-        <SocialApp />
+        <SocialApps />
       </Wrapper>
     </Container>
   );

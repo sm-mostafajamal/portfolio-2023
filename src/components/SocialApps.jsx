@@ -7,6 +7,7 @@ const Container = styled.div`
   align-items: center;
   width: 20%;
   color: white;
+  padding-top: 30px;
 `;
 const SocialIcon = styled.span`
   display: flex;
@@ -14,26 +15,27 @@ const SocialIcon = styled.span`
   align-items: center;
   border: 0.5px solid #ffffff52;
   border-radius: 50%;
-  height: 35px;
-  width: 35px;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
 `;
-const SocialApp = () => {
+const SocialApps = () => {
   return (
     <Container>
       <SocialIcon>
-        <LinkedIn style={{ fontSize: "20px" }} />
+        <LinkedIn style={{ fontSize: "30px" }} />
       </SocialIcon>
       <SocialIcon>
-        <GitHub style={{ fontSize: "20px" }} />
+        <GitHub style={{ fontSize: "30px" }} />
       </SocialIcon>
       <SocialIcon>
-        <Facebook style={{ fontSize: "20px" }} />
+        <Facebook style={{ fontSize: "30px" }} />
       </SocialIcon>
       <SocialIcon>
-        <Instagram style={{ fontSize: "20px" }} />
+        <Instagram style={{ fontSize: "30px" }} />
       </SocialIcon>
     </Container>
   );
 };
 
-export default SocialApp;
+export default SocialApps;
