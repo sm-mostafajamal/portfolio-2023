@@ -74,7 +74,12 @@ const Contact = () => {
             back to you as soon as possible
           </Subline>
         </Heading>
-        <Form method="post" netlify netlify-honeypot="bot-field" hidden>
+        {/* <Form method="post" netlify netlify-honeypot="bot-field" hidden> */}
+        <Form
+          method="POST"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+        >
           <Input type="hidden" name="form-name" value="contact" />
           <Input type="name" name="name" placeholder="Your Name" required />
           <Input type="email" name="email" placeholder="Your Email" required />
