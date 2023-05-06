@@ -1,4 +1,6 @@
-import { DarkModeOutlined, WbSunnyOutlined } from "@mui/icons-material";
+// import { DarkModeOutlined, WbSunnyOutlined } from "@mui/icons-material";
+import { WbSunnyOutlined } from "@mui/icons-material";
+
 import styled from "styled-components";
 import SocialApps from "../components/SocialApps";
 
