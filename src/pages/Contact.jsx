@@ -76,6 +76,7 @@ const Contact = () => {
         </Heading>
         {/* <Form method="post" netlify netlify-honeypot="bot-field" hidden> */}
         <Form
+          netlify
           method="POST"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
