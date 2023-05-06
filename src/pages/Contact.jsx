@@ -74,11 +74,18 @@ const Contact = () => {
             back to you as soon as possible
           </Subline>
         </Heading>
-        <Form>
-          <Input placeholder="Your Name" />
-          <Input placeholder="Your Email" />
-          <Textarea rows="5" cols="30" placeholder="Your Message" />
-          <Button>SUBMIT</Button>
+        <Form method="post" netlify netlify-honeypot="bot-field" hidden>
+          <Input type="hidden" name="form-name" value="contact" />
+          <Input type="name" name="name" placeholder="Your Name" required />
+          <Input type="email" name="email" placeholder="Your Email" required />
+          <Textarea
+            name="message"
+            rows="5"
+            cols="30"
+            placeholder="Your Message"
+            required
+          />
+          <Button type="submit">SUBMIT</Button>
         </Form>
       </Wrapper>
       <SocialApps />
