@@ -1,12 +1,11 @@
-// import { DarkModeOutlined, WbSunnyOutlined } from "@mui/icons-material";
-import { WbSunnyOutlined } from "@mui/icons-material";
+import { DarkModeOutlined, WbSunnyOutlined } from "@mui/icons-material";
 
 import styled from "styled-components";
 import SocialApps from "../components/SocialApps";
 
 const Container = styled.div`
   height: 100vh;
-  background-color: black;
+  background-color: ${({ mode }) => mode};
 `;
 const Header = styled.div`
   display: flex;
@@ -16,7 +15,7 @@ const Header = styled.div`
   padding: 20px 0;
 `;
 const Resume = styled.button`
-  color: white;
+  color: ${({ mode }) => mode};
   padding: 10px;
   background-color: transparent;
   border: 1px solid #d351006b;
@@ -32,7 +31,7 @@ const Resume = styled.button`
   }
 `;
 const Mode = styled.span`
-  color: white;
+  color: ${({ mode }) => mode};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,9 +47,9 @@ const Wrapper = styled.div`
   text-align: center;
 `;
 const Icon = styled.div`
-  border: 0.5px solid #ffffff52;
+  border: 0.5px solid ${({ mode }) => mode};
   border-radius: 50%;
-  color: #e8e6e3;
+  color: ${({ mode }) => mode};
   font-family: "Rubik Wet Paint", cursive;
   font-size: 3rem;
   width: 90px;
@@ -63,20 +62,20 @@ const Icon = styled.div`
 const Title = styled.h1`
   text-transform: capitalize;
   font-family: "Josefin Slab", serif;
-  color: white;
+  color: ${({ mode }) => mode};
   font-weight: 300;
-  border-top: 0.1px solid #ffffff52;
-  border-bottom: 0.1px solid #ffffff52;
+  border-top: 0.1px solid ${({ mode }) => mode};
+  border-bottom: 0.1px solid ${({ mode }) => mode};
   padding: 50px;
   /* margin: 50px; */
   font-size: 2.5rem;
 `;
 const Navbar = styled.ul`
-  color: white;
+  color: ${({ mode }) => mode};
   display: flex;
   justify-content: space-around;
   padding: 0;
-  border: 0.1px solid #ffffff52;
+  border: 0.1px solid ${({ mode }) => mode};
   border-radius: 5px;
   cursor: pointer;
 `;
@@ -86,11 +85,11 @@ const List = styled.li`
   letter-spacing: 2px;
   font-size: 13px;
   font-weight: 500;
-  color: #c8c6c4;
+  color: ${({ mode }) => mode};
   padding: 10px 20px;
 `;
 const Bar = styled.span`
-  border-right: 0.1px solid #ffffff52;
+  border-right: 0.1px solid ${({ mode }) => mode};
   /* rgba(24, 26, 27, 0.07) */
 `;
 const Name = styled.span`
@@ -104,25 +103,24 @@ const Bottom = styled.span`
   font-family: "Josefin Slab", serif;
 `;
 
-const Home = () => {
+const Home = ({ dark }) => {
   return (
-    <Container>
+    <Container mode={dark ? "black" : "#eae7dc"}>
       <Header>
-        <Resume>Resume</Resume>
-        <Mode>
-          <WbSunnyOutlined />
-          {/* <DarkModeOutlined /> */}
+        <Resume mode={dark ? "white" : "black"}>Resume</Resume>
+        <Mode mode={dark ? "white" : "black"}>
+          {dark ? <WbSunnyOutlined /> : <DarkModeOutlined />}
         </Mode>
       </Header>
       <Wrapper>
-        <Icon>M</Icon>
-        <Title>
+        <Icon mode={dark ? "#e8e6e3" : "black"}>M</Icon>
+        <Title mode={dark ? "white" : "black"}>
           Hi there, I'm <Name>S.M. Mostafa Jamal</Name>
           <Bottom>
             <br />A full-stack software engineer
           </Bottom>
         </Title>
-        <Navbar>
+        <Navbar mode={dark ? "#c8c6c4" : "black"}>
           <List>about me</List>
           <Bar />
           <List>projects</List>

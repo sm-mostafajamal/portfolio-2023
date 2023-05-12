@@ -6,22 +6,24 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 20%;
-  color: white;
+  color: ${({ mode }) => mode};
   padding-top: 30px;
 `;
 const SocialIcon = styled.span`
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 0.5px solid #ffffff52;
+  border: 0.5px solid ${({ mode }) => mode};
   border-radius: 50%;
   height: 50px;
   width: 50px;
   cursor: pointer;
 `;
 const SocialApps = () => {
+  const dark = false;
+
   return (
-    <Container>
+    <Container mode={dark ? "white" : "black"}>
       <SocialIcon>
         <LinkedIn style={{ fontSize: "30px" }} />
       </SocialIcon>

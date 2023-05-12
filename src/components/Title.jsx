@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const PageTitle = styled.h1`
-  color: white;
+  color: ${({ mode }) => mode};
   display: flex;
   align-items: center;
   text-transform: capitalize;
@@ -18,9 +18,9 @@ const Line = styled.hr`
   margin-left: 20px;
 `;
 
-const Title = ({ title }) => {
+const Title = ({ title, dark }) => {
   return (
-    <PageTitle>
+    <PageTitle mode={dark ? "white" : "black"}>
       {title} <Line />
     </PageTitle>
   );

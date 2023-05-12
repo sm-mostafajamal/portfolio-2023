@@ -5,12 +5,14 @@ import { projects } from "./data";
 import Contact from "./pages/Contact";
 
 function App() {
+  const dark = false;
+
   return (
-    <div className="App">
-      <Home />
-      <AboutMe />
-      <Projects data={projects} />
-      <Contact />
+    <div>
+      <Home dark={dark} />
+      <AboutMe dark={dark} />
+      <Projects data={projects} dark={dark} />
+      <Contact dark={dark} />
     </div>
   );
 }

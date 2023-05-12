@@ -6,7 +6,7 @@ const Container = styled.div`
   height: 100vh;
   /* background-color: white; */
   /* background-color: #151515; */
-  background-color: black;
+  background-color: ${({ mode }) => mode};
 
   display: flex;
   flex-direction: column;
@@ -30,7 +30,7 @@ const About = styled.div`
   flex-direction: column;
 `;
 const Details = styled.div`
-  color: white;
+  color: ${({ mode }) => mode};
   font-size: 18px;
   font-weight: 300;
   letter-spacing: 1px;
@@ -84,14 +84,14 @@ const Skill = styled.li`
   font-weight: 500;
 `;
 
-const AboutMe = () => {
+const AboutMe = ({ dark }) => {
   return (
-    <Container>
+    <Container mode={dark ? "black" : "#eae7dc"}>
       <DetailsWrapper>
         <About>
           <Title title={"About Me"} />
           <Wrapper>
-            <Details>
+            <Details mode={dark ? "white" : "black"}>
               <Article>
                 I'm a passionate, forward-thinking Software Engineer who is
                 willing to put up every effort to find a solution. While

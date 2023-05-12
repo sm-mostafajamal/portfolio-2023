@@ -57,7 +57,7 @@ const Icon = styled.img`
   border-radius: 10px;
 `;
 
-const Icons = () => {
+const Icons = ({ dark }) => {
   return (
     <Container>
       <Wrapper>
