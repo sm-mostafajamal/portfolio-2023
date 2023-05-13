@@ -5,7 +5,7 @@ import { projects } from "./data";
 import Contact from "./pages/Contact";
 
 function App() {
-  const dark = false;
+  const dark = true;
 
   return (
     <div>

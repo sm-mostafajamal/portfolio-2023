@@ -3,7 +3,7 @@ import Title from "../components/Title";
 import Project from "../components/Project";
 
 const Container = styled.div`
-  background-color: black;
+  background-color: ${({ mode }) => mode};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,11 +17,11 @@ const Wrapper = styled.div`
   align-self: center;
 `;
 
-const Projects = ({ data }) => {
+const Projects = ({ data, dark }) => {
   return (
-    <Container>
+    <Container mode={dark ? "black" : "#eae7dc"}>
       <Wrapper>
-        <Title title="Some Projects I've built" />
+        <Title title="Some Projects I've built" dark={dark} />
         {data.map((project, i) => (
           <div key={i}>
             {Number(i) % 2 === 0 ? (

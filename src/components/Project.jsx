@@ -1,3 +1,4 @@
+import { Launch } from "@mui/icons-material";
 import styled from "styled-components";
 const Image = styled.img`
   width: 100%;
@@ -78,6 +79,9 @@ const Technologies = styled.ul`
   `}
 `;
 const Tool = styled.li`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 5px;
 `;
 const Project = ({ project, direction }) => {
@@ -106,8 +110,12 @@ const Project = ({ project, direction }) => {
           direction={cardDirection}
           style={{ fontSize: "18px", color: "#4dc6af", cursor: "pointer" }}
         >
-          <Tool>Live</Tool>
-          <Tool>Github</Tool>
+          <Tool>
+            Live <Launch />
+          </Tool>
+          <Tool>
+            Github <Launch />
+          </Tool>
         </Technologies>
       </AboutProject>
     </Container>

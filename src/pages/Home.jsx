@@ -121,6 +121,8 @@ const Home = ({ dark }) => {
           </Bottom>
         </Title>
         <Navbar mode={dark ? "#c8c6c4" : "black"}>
+          <List>Home</List>
+          <Bar />
           <List>about me</List>
           <Bar />
           <List>projects</List>

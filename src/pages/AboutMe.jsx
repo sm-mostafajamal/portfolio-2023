@@ -89,7 +89,7 @@ const AboutMe = ({ dark }) => {
     <Container mode={dark ? "black" : "#eae7dc"}>
       <DetailsWrapper>
         <About>
-          <Title title={"About Me"} />
+          <Title title={"About Me"} dark={dark} />
           <Wrapper>
             <Details mode={dark ? "white" : "black"}>
               <Article>

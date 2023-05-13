@@ -16,9 +16,9 @@ const Wrapper = styled.div`
   flex-shrink: 0;
   /* height: 50px; */
   align-items: center;
-  animation: slide-left 20s linear infinite;
   font-family: impact, sans-serif;
   background: none;
+  animation: slide-left 30s linear infinite;
   @keyframes slide-left {
     from {
       -webkit-transform: translateX(0);
@@ -55,9 +55,10 @@ const Icon = styled.img`
   background-color: white;
   padding: 10px;
   border-radius: 10px;
+  border: 0.1px solid gray;
 `;
 
-const Icons = ({ dark }) => {
+const Icons = () => {
   return (
     <Container>
       <Wrapper>

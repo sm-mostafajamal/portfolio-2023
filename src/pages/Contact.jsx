@@ -5,7 +5,7 @@ import SocialApps from "../components/SocialApps";
 
 const Container = styled.div`
   height: 100vh;
-  background-color: black;
+  background-color: ${({ mode }) => mode};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,7 +21,7 @@ const Wrapper = styled.div`
 const Heading = styled.div``;
 const Subline = styled.p`
   margin-top: 20px;
-  color: #ccd6f6;
+  color: ${({ mode }) => mode};
   font-size: 18px;
 `;
 const Form = styled.form`
@@ -63,15 +63,15 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-const Contact = () => {
+const Contact = ({ dark }) => {
   return (
-    <Container>
+    <Container mode={dark ? "black" : "#eae7dc"}>
       <Wrapper>
         <Heading>
-          <Title title="Get in touch" />
-          <Subline>
+          <Title title="Get in touch" dark={dark} />
+          <Subline mode={dark ? "#ccd6f6" : "#d35100"}>
             Feel free to Contact me by submitting the form below and I will get
-            back to you as soon as possible
+            back to you as soon as possible.
           </Subline>
         </Heading>
         {/* <Form method="post" netlify netlify-honeypot="bot-field" hidden> */}
