@@ -1,5 +1,5 @@
 import { DarkMode, LightMode } from "@mui/icons-material";
-
+import devices from "../responsive";
 import styled from "styled-components";
 import SocialApps from "../components/SocialApps";
 import { useContext } from "react";
@@ -41,9 +41,9 @@ const Mode = styled.span`
   cursor: pointer;
 `;
 const Wrapper = styled.div`
-  height: 70vh;
+  height: 80vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
@@ -59,6 +59,7 @@ const Icon = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  ${devices.mobile({ width: "50px", height: "50px", fontSize: "2rem" })}
 `;
 
 const Title = styled.h1`
@@ -69,8 +70,14 @@ const Title = styled.h1`
   border-top: 0.1px solid ${({ mode }) => mode};
   border-bottom: 0.1px solid ${({ mode }) => mode};
   padding: 50px;
-  /* margin: 50px; */
+  margin: 50px 0;
   font-size: 2.5rem;
+  ${devices.mobile({ fontSize: "1.2rem", padding: "25px" })}
+`;
+const Bottom = styled.span`
+  font-size: 22px;
+  font-family: "Josefin Slab", serif;
+  ${devices.mobile({ fontSize: "12px" })}
 `;
 const Navbar = styled.ul`
   color: ${({ mode }) => mode};
@@ -80,6 +87,7 @@ const Navbar = styled.ul`
   border: 0.1px solid ${({ mode }) => mode};
   border-radius: 5px;
   cursor: pointer;
+  ${devices.mobile({ width: "90%" })}
 `;
 const List = styled.li`
   list-style: none;
@@ -89,6 +97,7 @@ const List = styled.li`
   font-weight: 500;
   color: ${({ mode }) => mode};
   padding: 10px 20px;
+  ${devices.mobile({ fontSize: "10px", padding: "5px 10px" })}
 `;
 const Bar = styled.span`
   border-right: 0.1px solid ${({ mode }) => mode};
@@ -99,10 +108,6 @@ const Name = styled.span`
   color: #d35100;
   /* color: teal; */
   font-weight: bold;
-`;
-const Bottom = styled.span`
-  font-size: 22px;
-  font-family: "Josefin Slab", serif;
 `;
 
 const Home = () => {

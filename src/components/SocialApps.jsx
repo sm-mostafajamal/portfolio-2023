@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Facebook, GitHub, Instagram, LinkedIn } from "@mui/icons-material";
 import { useModeState } from "../context/ModeContext";
+import devices from "../responsive";
 
 const Container = styled.div`
   display: flex;
@@ -8,17 +9,22 @@ const Container = styled.div`
   align-items: center;
   width: 20%;
   color: ${({ mode }) => mode};
-  padding-top: 30px;
+  margin-top: 80px;
+
+  ${devices.mobile({ width: "60%" })}
+  ${devices.tablet({ width: "40%" })}
+  ${devices.tablet({ width: "30%" })}
 `;
 const SocialIcon = styled.span`
   display: flex;
   justify-content: center;
   align-items: center;
   border: 0.5px solid ${({ mode }) => mode};
-  border-radius: 50%;
+  border-radius: 15px;
   height: 50px;
   width: 50px;
   cursor: pointer;
+  ${devices.mobile({ height: "40px", width: "40px" })}
 `;
 const SocialApps = () => {
   const state = useModeState();

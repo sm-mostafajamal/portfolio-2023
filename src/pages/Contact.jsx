@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Title from "../components/Title";
 import SocialApps from "../components/SocialApps";
 import { useModeState } from "../context/ModeContext";
+import devices from "../responsive";
 
 const Container = styled.div`
   height: 100vh;
@@ -10,46 +11,51 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
 `;
 const Wrapper = styled.div`
   height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  ${devices.mobile({ width: "90%" })}
 `;
 const Heading = styled.div``;
 const Subline = styled.p`
-  margin-top: 20px;
+  margin: 20px 0;
   color: ${({ mode }) => mode};
   font-size: 18px;
+  ${devices.mobile({ fontSize: "15px" })}
 `;
 const Form = styled.form`
   height: 40vh;
   padding: 30px;
   border-radius: 10px;
-  background-color: #242424c9;
+  background-color: #242424a6;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  ${devices.mobile({ padding: "20px" })}
 `;
 const Input = styled.input`
-  width: 80%;
+  width: 90%;
   padding: 15px;
-  margin: auto;
+  margin: 5px auto;
   border: none;
   outline: none;
   border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.733);
 `;
 const Textarea = styled.textarea`
-  width: 80%;
+  width: 90%;
   padding: 15px;
-  margin: auto;
+  margin: 5px auto;
+
   resize: none;
   border-radius: 5px;
   outline: none;
   border: none;
+  background-color: rgba(255, 255, 255, 0.733);
 `;
 const Button = styled.button`
   width: 150px;

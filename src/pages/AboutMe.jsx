@@ -2,9 +2,10 @@ import styled from "styled-components";
 import Title from "../components/Title";
 import Icons from "../components/Icons";
 import { useModeState } from "../context/ModeContext";
+import devices from "../responsive";
 
 const Container = styled.div`
-  height: 100vh;
+  height: 100%;
   /* background-color: white; */
   /* background-color: #151515; */
   background-color: ${({ mode }) => mode};
@@ -14,7 +15,7 @@ const Container = styled.div`
 `;
 
 const DetailsWrapper = styled.div`
-  width: 80%;
+  width: 90%;
   /* height: 90vh; */
   margin: auto;
   display: flex;
@@ -23,8 +24,13 @@ const DetailsWrapper = styled.div`
 `;
 const Wrapper = styled.div`
   display: flex;
+  justify-content: center;
   gap: 40px;
-  margin: 50px 0;
+  ${devices.mobile({
+    flexDirection: "column",
+    margin: "20px 0",
+    alignItems: "center",
+  })}
 `;
 const About = styled.div`
   display: flex;
@@ -36,29 +42,10 @@ const Details = styled.div`
   font-weight: 300;
   letter-spacing: 1px;
   line-height: 1.6rem;
+  ${devices.mobile({ fontSize: "16px" })}
+  ${devices.tablet({ fontSize: "16px" })}
 `;
 const Article = styled.p``;
-const ImageContainer = styled.div`
-  min-width: 290px;
-  height: 300px;
-  border-radius: 5px;
-  position: relative;
-  border: 2px solid teal;
-  /* &:hover {
-    box-shadow: 15px 15px 5px 0px rgba(0, 128, 128, 0.75);
-    -webkit-box-shadow: 15px 15px 5px 0px rgba(0, 128, 128, 0.75);
-    -moz-box-shadow: 15px 15px 5px 0px rgba(0, 128, 128, 0.75);
-  } */
-`;
-const Image = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 5px;
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-`;
 const TechTitle = styled.span`
   font-size: 18px;
   font-weight: 400;
@@ -72,17 +59,35 @@ const Skills = styled.ul`
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  ${devices.mobile({ height: "100%" })}
 `;
 const Skill = styled.li`
   list-style: none;
   color: rgba(255, 255, 255, 0.849);
-  /* color: #212121; */
   background-color: teal;
-  /* background-color: #e7e7e7; */
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
   font-weight: 500;
+  ${devices.mobile({ fontSize: "14px", margin: "5px", padding: "5px" })}
+  ${devices.tablet({ fontSize: "16px", margin: "5px", padding: "5px" })}
+`;
+const ImageContainer = styled.div`
+  min-width: 290px;
+  height: 300px;
+  border-radius: 5px;
+  position: relative;
+  border: 2px solid teal;
+  ${devices.mobile({ width: "290px" })}
+`;
+const Image = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
 `;
 
 const AboutMe = () => {
@@ -127,6 +132,7 @@ const AboutMe = () => {
                 <Skill>Jest</Skill>
                 <Skill>Git</Skill>
               </Skills>
+              <Icons />
             </Details>
             <ImageContainer>
               <Image src="./images/img.png" />
@@ -134,7 +140,6 @@ const AboutMe = () => {
           </Wrapper>
         </About>
       </DetailsWrapper>
-      <Icons />
     </Container>
   );
 };

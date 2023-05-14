@@ -1,5 +1,30 @@
 import { Launch } from "@mui/icons-material";
 import styled from "styled-components";
+import devices from "../responsive";
+const Container = styled.div`
+  width: 100%;
+  position: relative;
+  display: flex;
+  margin: 50px 0;
+  ${(props) =>
+    props.direction === "left" &&
+    `
+    flex-direction: row-reverse;
+    `}
+  ${devices.mobile({ flexDirection: "column", margin: "20px 0" })}
+  ${devices.tablet({ margin: "40px 0" })}
+`;
+
+const ImageContainer = styled.div`
+  width: 60%;
+  height: 350px;
+  border: 1px solid #d35100;
+  position: relative;
+  border-radius: 5px;
+  ${devices.mobile({ width: "100%", height: "200px" })}
+  ${devices.tablet({ height: "280px" })}
+  ${devices.pc({ height: "350px" })}
+`;
 const Image = styled.img`
   width: 100%;
   height: 100%;
@@ -8,28 +33,8 @@ const Image = styled.img`
   object-fit: cover;
   bottom: 20px;
   right: 20px;
+  ${devices.mobile({ position: "static", width: "100%" })}
 `;
-const Container = styled.div`
-  width: 100%;
-  position: relative;
-  display: flex;
-  ${(props) =>
-    props.direction === "left" &&
-    `
-    flex-direction: row-reverse;
-  `}
-
-  margin: 50px 0;
-`;
-const ImageContainer = styled.div`
-  width: 60%;
-  height: 350px;
-  border: 1px solid #d35100;
-  position: relative;
-  border-radius: 5px;
-  /* flex: 1; */
-`;
-
 const AboutProject = styled.div`
   color: white;
   background-color: #242424c9;
@@ -47,8 +52,23 @@ const AboutProject = styled.div`
     `
     left: 0;
     text-align: left;
-
   `}
+  ${devices.mobile({
+    position: "static",
+    width: "95%",
+    textAlign: "center",
+    padding: "10px",
+    fontSize: "14px",
+  })}
+    ${devices.tablet({
+    width: "50%",
+    padding: "10px",
+    fontSize: "14px",
+  })}
+      ${devices.pc({
+    padding: "20px",
+    fontSize: "16px",
+  })}
 `;
 const ProjectTitle = styled.h2`
   color: #d35100;
@@ -69,6 +89,7 @@ const Technologies = styled.ul`
   list-style: none;
   display: flex;
   justify-content: flex-end;
+  flex-wrap: wrap;
   padding: 0;
   ${(props) =>
     props.direction === "left" &&
@@ -77,12 +98,15 @@ const Technologies = styled.ul`
     justify-content: flex-start;
 
   `}
+  ${devices.mobile({ justifyContent: "center" })}
 `;
 const Tool = styled.li`
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 5px;
+  font-size: 16px;
+  font-weight: 300;
 `;
 const Project = ({ project, direction }) => {
   const cardDirection = direction;

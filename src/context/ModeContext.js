@@ -26,7 +26,7 @@ export const useModeDispatch = () => {
 };
 
 export const ModeContextProvider = (props) => {
-  const [state, modeDispatch] = useReducer(modeReducer, { mode: false });
+  const [state, modeDispatch] = useReducer(modeReducer, { mode: true });
   return (
     <ModeContext.Provider value={[state, modeDispatch]}>
       {props.children}
