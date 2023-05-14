@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import Title from "../components/Title";
 import Project from "../components/Project";
+import { useContext } from "react";
+import ModeContext from "../context/ModeContext";
 
 const Container = styled.div`
   background-color: ${({ mode }) => mode};
@@ -17,11 +19,13 @@ const Wrapper = styled.div`
   align-self: center;
 `;
 
-const Projects = ({ data, dark }) => {
+const Projects = ({ data }) => {
+  const [state] = useContext(ModeContext);
+
   return (
-    <Container mode={dark ? "black" : "#eae7dc"}>
+    <Container mode={state.mode ? "black" : "#eae7dc"}>
       <Wrapper>
-        <Title title="Some Projects I've built" dark={dark} />
+        <Title title="Some Projects I've built" />
         {data.map((project, i) => (
           <div key={i}>
             {Number(i) % 2 === 0 ? (

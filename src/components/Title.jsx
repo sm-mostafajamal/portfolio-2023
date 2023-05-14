@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
+import ModeContext from "../context/ModeContext";
 
 const PageTitle = styled.h1`
   color: ${({ mode }) => mode};
@@ -19,8 +20,10 @@ const Line = styled.hr`
 `;
 
 const Title = ({ title, dark }) => {
+  const [state] = useContext(ModeContext);
+
   return (
-    <PageTitle mode={dark ? "white" : "black"}>
+    <PageTitle mode={state.mode ? "white" : "black"}>
       {title} <Line />
     </PageTitle>
   );

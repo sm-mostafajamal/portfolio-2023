@@ -1,7 +1,9 @@
-import { DarkModeOutlined, WbSunnyOutlined } from "@mui/icons-material";
+import { DarkMode, LightMode } from "@mui/icons-material";
 
 import styled from "styled-components";
 import SocialApps from "../components/SocialApps";
+import { useContext } from "react";
+import ModeContext from "../context/ModeContext";
 
 const Container = styled.div`
   height: 100vh;
@@ -103,24 +105,28 @@ const Bottom = styled.span`
   font-family: "Josefin Slab", serif;
 `;
 
-const Home = ({ dark }) => {
+const Home = () => {
+  const [state, modeDispatch] = useContext(ModeContext);
   return (
-    <Container mode={dark ? "black" : "#eae7dc"}>
+    <Container mode={state.mode ? "black" : "#eae7dc"}>
       <Header>
-        <Resume mode={dark ? "white" : "black"}>Resume</Resume>
-        <Mode mode={dark ? "white" : "black"}>
-          {dark ? <WbSunnyOutlined /> : <DarkModeOutlined />}
+        <Resume mode={state.mode ? "white" : "black"}>Resume</Resume>
+        <Mode
+          mode={state.mode ? "white" : "black"}
+          onClick={() => modeDispatch({ type: "TOGGLE" })}
+        >
+          {state.mode ? <LightMode /> : <DarkMode />}
         </Mode>
       </Header>
       <Wrapper>
-        <Icon mode={dark ? "#e8e6e3" : "black"}>M</Icon>
-        <Title mode={dark ? "white" : "black"}>
+        <Icon mode={state.mode ? "#e8e6e3" : "black"}>M</Icon>
+        <Title mode={state.mode ? "white" : "black"}>
           Hi there, I'm <Name>S.M. Mostafa Jamal</Name>
           <Bottom>
             <br />A full-stack software engineer
           </Bottom>
         </Title>
-        <Navbar mode={dark ? "#c8c6c4" : "black"}>
+        <Navbar mode={state.mode ? "#c8c6c4" : "black"}>
           <List>Home</List>
           <Bar />
           <List>about me</List>

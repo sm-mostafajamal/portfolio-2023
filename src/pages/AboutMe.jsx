@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import Title from "../components/Title";
 import Icons from "../components/Icons";
+import { useContext } from "react";
+import ModeContext from "../context/ModeContext";
 
 const Container = styled.div`
   height: 100vh;
@@ -84,14 +86,15 @@ const Skill = styled.li`
   font-weight: 500;
 `;
 
-const AboutMe = ({ dark }) => {
+const AboutMe = () => {
+  const [state] = useContext(ModeContext);
   return (
-    <Container mode={dark ? "black" : "#eae7dc"}>
+    <Container mode={state.mode ? "black" : "#eae7dc"}>
       <DetailsWrapper>
         <About>
-          <Title title={"About Me"} dark={dark} />
+          <Title title={"About Me"} />
           <Wrapper>
-            <Details mode={dark ? "white" : "black"}>
+            <Details mode={state.mode ? "white" : "black"}>
               <Article>
                 I'm a passionate, forward-thinking Software Engineer who is
                 willing to put up every effort to find a solution. While

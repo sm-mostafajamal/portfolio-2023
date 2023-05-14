@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import Title from "../components/Title";
 import SocialApps from "../components/SocialApps";
+import ModeContext from "../context/ModeContext";
 
 const Container = styled.div`
   height: 100vh;
@@ -63,13 +64,15 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-const Contact = ({ dark }) => {
+const Contact = () => {
+  const [state] = useContext(ModeContext);
+
   return (
-    <Container mode={dark ? "black" : "#eae7dc"}>
+    <Container mode={state.mode ? "black" : "#eae7dc"}>
       <Wrapper>
         <Heading>
-          <Title title="Get in touch" dark={dark} />
-          <Subline mode={dark ? "#ccd6f6" : "#d35100"}>
+          <Title title="Get in touch" />
+          <Subline mode={state.mode ? "#ccd6f6" : "#d35100"}>
             Feel free to Contact me by submitting the form below and I will get
             back to you as soon as possible.
           </Subline>

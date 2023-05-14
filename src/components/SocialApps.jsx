@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { Facebook, GitHub, Instagram, LinkedIn } from "@mui/icons-material";
+import { useContext } from "react";
+import ModeContext from "../context/ModeContext";
 
 const Container = styled.div`
   display: flex;
@@ -20,10 +22,10 @@ const SocialIcon = styled.span`
   cursor: pointer;
 `;
 const SocialApps = () => {
-  const dark = false;
+  const [state] = useContext(ModeContext);
 
   return (
-    <Container mode={dark ? "white" : "black"}>
+    <Container mode={state.mode ? "white" : "black"}>
       <SocialIcon>
         <LinkedIn style={{ fontSize: "30px" }} />
       </SocialIcon>
