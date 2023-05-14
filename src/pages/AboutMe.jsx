@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import Title from "../components/Title";
 import Icons from "../components/Icons";
-import { useContext } from "react";
-import ModeContext from "../context/ModeContext";
+import { useModeState } from "../context/ModeContext";
 
 const Container = styled.div`
   height: 100vh;
@@ -87,7 +86,8 @@ const Skill = styled.li`
 `;
 
 const AboutMe = () => {
-  const [state] = useContext(ModeContext);
+  const state = useModeState();
+
   return (
     <Container mode={state.mode ? "black" : "#eae7dc"}>
       <DetailsWrapper>

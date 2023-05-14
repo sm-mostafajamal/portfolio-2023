@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import Title from "../components/Title";
 import Project from "../components/Project";
-import { useContext } from "react";
-import ModeContext from "../context/ModeContext";
+import { useModeState } from "../context/ModeContext";
 
 const Container = styled.div`
   background-color: ${({ mode }) => mode};
@@ -20,7 +19,7 @@ const Wrapper = styled.div`
 `;
 
 const Projects = ({ data }) => {
-  const [state] = useContext(ModeContext);
+  const state = useModeState();
 
   return (
     <Container mode={state.mode ? "black" : "#eae7dc"}>

@@ -1,8 +1,7 @@
-import React, { useContext } from "react";
 import styled from "styled-components";
 import Title from "../components/Title";
 import SocialApps from "../components/SocialApps";
-import ModeContext from "../context/ModeContext";
+import { useModeState } from "../context/ModeContext";
 
 const Container = styled.div`
   height: 100vh;
@@ -65,7 +64,7 @@ const Button = styled.button`
 `;
 
 const Contact = () => {
-  const [state] = useContext(ModeContext);
+  const state = useModeState();
 
   return (
     <Container mode={state.mode ? "black" : "#eae7dc"}>

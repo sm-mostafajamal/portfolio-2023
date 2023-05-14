@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { Facebook, GitHub, Instagram, LinkedIn } from "@mui/icons-material";
-import { useContext } from "react";
-import ModeContext from "../context/ModeContext";
+import { useModeState } from "../context/ModeContext";
 
 const Container = styled.div`
   display: flex;
@@ -22,7 +21,7 @@ const SocialIcon = styled.span`
   cursor: pointer;
 `;
 const SocialApps = () => {
-  const [state] = useContext(ModeContext);
+  const state = useModeState();
 
   return (
     <Container mode={state.mode ? "white" : "black"}>

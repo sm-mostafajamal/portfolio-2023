@@ -1,7 +1,6 @@
-import { useReducer, createContext } from "react";
+import { useReducer, createContext, useContext } from "react";
 
 const modeReducer = (state, action) => {
-  console.log(action.type);
   switch (action.type) {
     case "dark":
       return state;
@@ -15,6 +14,16 @@ const modeReducer = (state, action) => {
 };
 
 const ModeContext = createContext();
+
+export const useModeState = () => {
+  const stateAndDispatch = useContext(ModeContext);
+  return stateAndDispatch[0];
+};
+
+export const useModeDispatch = () => {
+  const stateAndDispatch = useContext(ModeContext);
+  return stateAndDispatch[1];
+};
 
 export const ModeContextProvider = (props) => {
   const [state, modeDispatch] = useReducer(modeReducer, { mode: false });
