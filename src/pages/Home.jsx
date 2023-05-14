@@ -19,6 +19,7 @@ const Header = styled.div`
 const Resume = styled.button`
   color: ${({ mode }) => mode};
   padding: 10px;
+  margin-right: 80px;
   background-color: transparent;
   border: 1px solid #d351006b;
   border-radius: 5px;
@@ -33,6 +34,9 @@ const Resume = styled.button`
   }
 `;
 const Mode = styled.span`
+  position: fixed;
+  top: 25px;
+  z-index: 999;
   color: ${({ mode }) => mode};
   display: flex;
   justify-content: center;
@@ -74,12 +78,24 @@ const Title = styled.h1`
   font-size: 2.5rem;
   ${devices.mobile({ fontSize: "1.2rem", padding: "25px" })}
 `;
+const Name = styled.span`
+  font-family: "Sacramento", cursive;
+  color: #d35100;
+  /* color: teal; */
+  font-weight: bold;
+`;
 const Bottom = styled.span`
   font-size: 22px;
   font-family: "Josefin Slab", serif;
   ${devices.mobile({ fontSize: "12px" })}
 `;
+
 const Navbar = styled.ul`
+  background-color: #d251002c;
+  position: fixed;
+  top: 20px;
+  z-index: 999;
+  /* transform: translateY(200%); */
   color: ${({ mode }) => mode};
   display: flex;
   justify-content: space-around;
@@ -87,7 +103,7 @@ const Navbar = styled.ul`
   border: 0.1px solid ${({ mode }) => mode};
   border-radius: 5px;
   cursor: pointer;
-  ${devices.mobile({ width: "90%" })}
+  ${devices.mobile({ position: "static", width: "90%" })}
 `;
 const List = styled.li`
   list-style: none;
@@ -103,17 +119,15 @@ const Bar = styled.span`
   border-right: 0.1px solid ${({ mode }) => mode};
   /* rgba(24, 26, 27, 0.07) */
 `;
-const Name = styled.span`
-  font-family: "Sacramento", cursive;
-  color: #d35100;
-  /* color: teal; */
-  font-weight: bold;
+const Link = styled.a`
+  text-decoration: none;
+  color: ${({ mode }) => mode};
 `;
 
 const Home = () => {
   const [state, modeDispatch] = useContext(ModeContext);
   return (
-    <Container mode={state.mode ? "black" : "#eae7dc"}>
+    <Container mode={state.mode ? "black" : "#eae7dc"} id="home">
       <Header>
         <Resume mode={state.mode ? "white" : "black"}>Resume</Resume>
         <Mode
@@ -131,14 +145,22 @@ const Home = () => {
             <br />A full-stack software engineer
           </Bottom>
         </Title>
-        <Navbar mode={state.mode ? "#c8c6c4" : "black"}>
-          <List>Home</List>
+        <Navbar mode={state.mode ? "#c8c6c4" : "black"} href="#home">
+          <Link mode={state.mode ? "#c8c6c4" : "black"} href="#home">
+            <List>Home</List>
+          </Link>
           <Bar />
-          <List>about me</List>
+          <Link mode={state.mode ? "#c8c6c4" : "black"} href="#about">
+            <List>about me</List>
+          </Link>
           <Bar />
-          <List>projects</List>
+          <Link mode={state.mode ? "#c8c6c4" : "black"} href="#projects">
+            <List>projects</List>
+          </Link>
           <Bar />
-          <List>contact</List>
+          <Link mode={state.mode ? "#c8c6c4" : "black"} href="#contact">
+            <List>contact</List>
+          </Link>
         </Navbar>
         <SocialApps />
       </Wrapper>

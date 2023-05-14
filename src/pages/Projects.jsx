@@ -22,7 +22,7 @@ const Projects = ({ data }) => {
   const state = useModeState();
 
   return (
-    <Container mode={state.mode ? "black" : "#eae7dc"}>
+    <Container mode={state.mode ? "black" : "#eae7dc"} id="projects">
       <Wrapper>
         <Title title="Some Projects I've built" />
         {data.map((project, i) => (

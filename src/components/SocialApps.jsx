@@ -26,22 +26,51 @@ const SocialIcon = styled.span`
   cursor: pointer;
   ${devices.mobile({ height: "40px", width: "40px" })}
 `;
+const Link = styled.a`
+  text-decoration: none;
+  color: ${({ mode }) => mode};
+`;
+
 const SocialApps = () => {
   const state = useModeState();
 
   return (
     <Container mode={state.mode ? "white" : "black"}>
       <SocialIcon>
-        <LinkedIn style={{ fontSize: "30px" }} />
+        <Link
+          target="_blank"
+          href="https://linkedin.com/in/sm-mostafajamal"
+          mode={state.mode ? "#c8c6c4" : "black"}
+        >
+          <LinkedIn style={{ fontSize: "30px" }} />
+        </Link>
       </SocialIcon>
       <SocialIcon>
-        <GitHub style={{ fontSize: "30px" }} />
+        <Link
+          target="_blank"
+          href="https://github.com/sm-mostafajamal"
+          mode={state.mode ? "#c8c6c4" : "black"}
+        >
+          <GitHub style={{ fontSize: "30px" }} />
+        </Link>
       </SocialIcon>
       <SocialIcon>
-        <Facebook style={{ fontSize: "30px" }} />
+        <Link
+          target="_blank"
+          href="https://www.facebook.com/SM.MostafaJamal/"
+          mode={state.mode ? "#c8c6c4" : "black"}
+        >
+          <Facebook style={{ fontSize: "30px" }} />
+        </Link>
       </SocialIcon>
       <SocialIcon>
-        <Instagram style={{ fontSize: "30px" }} />
+        <Link
+          target="_blank"
+          href="https://www.instagram.com/sm.mostafajamal/"
+          mode={state.mode ? "#c8c6c4" : "black"}
+        >
+          <Instagram style={{ fontSize: "30px" }} />
+        </Link>
       </SocialIcon>
     </Container>
   );

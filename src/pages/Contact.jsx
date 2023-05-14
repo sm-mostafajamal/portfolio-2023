@@ -73,7 +73,7 @@ const Contact = () => {
   const state = useModeState();
 
   return (
-    <Container mode={state.mode ? "black" : "#eae7dc"}>
+    <Container mode={state.mode ? "black" : "#eae7dc"} id="contact">
       <Wrapper>
         <Heading>
           <Title title="Get in touch" />

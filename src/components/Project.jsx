@@ -1,6 +1,7 @@
 import { Launch } from "@mui/icons-material";
 import styled from "styled-components";
 import devices from "../responsive";
+
 const Container = styled.div`
   width: 100%;
   position: relative;
@@ -108,6 +109,9 @@ const Tool = styled.li`
   font-size: 16px;
   font-weight: 300;
 `;
+const Link = styled.a`
+  text-decoration: none;
+`;
 const Project = ({ project, direction }) => {
   const cardDirection = direction;
   return (
@@ -134,12 +138,16 @@ const Project = ({ project, direction }) => {
           direction={cardDirection}
           style={{ fontSize: "18px", color: "#4dc6af", cursor: "pointer" }}
         >
-          <Tool>
-            Live <Launch />
-          </Tool>
-          <Tool>
-            Github <Launch />
-          </Tool>
+          <Link>
+            <Tool>
+              Live <Launch />
+            </Tool>
+          </Link>
+          <Link>
+            <Tool>
+              Github <Launch />
+            </Tool>
+          </Link>
         </Technologies>
       </AboutProject>
     </Container>

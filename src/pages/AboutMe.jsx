@@ -94,7 +94,7 @@ const AboutMe = () => {
   const state = useModeState();
 
   return (
-    <Container mode={state.mode ? "black" : "#eae7dc"}>
+    <Container mode={state.mode ? "black" : "#eae7dc"} id="about">
       <DetailsWrapper>
         <About>
           <Title title={"About Me"} />
