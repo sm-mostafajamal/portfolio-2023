@@ -5,6 +5,7 @@ export const projects = [
     title: "Steadfast Communications",
     about: `Steadfast Communications is the sister concern of Steadfast International Services, LLC. Which is the leading talent acquisition platform that delivers top candidates to enterprises by leveraging the largest community of recruiters and sourcing technology platforms.`,
     tools: [
+      "JavaScipt",
       "React",
       "Redux",
       "Redux toolkit",
