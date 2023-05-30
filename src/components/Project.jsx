@@ -111,6 +111,7 @@ const Tool = styled.li`
 `;
 const Link = styled.a`
   text-decoration: none;
+  color: #4dc6af;
 `;
 const Project = ({ project, direction }) => {
   const cardDirection = direction;
@@ -138,14 +139,19 @@ const Project = ({ project, direction }) => {
           direction={cardDirection}
           style={{ fontSize: "18px", color: "#4dc6af", cursor: "pointer" }}
         >
-          <Link>
+          <Link href={`${project.live}`} target="_blank">
             <Tool>
               Live <Launch />
             </Tool>
           </Link>
-          <Link>
+          <Link href={`${project.client}`} target="_blank">
             <Tool>
-              Github <Launch />
+              Client-Side Code <Launch />
+            </Tool>
+          </Link>
+          <Link href={`${project.server}`} target="_blank">
+            <Tool>
+              Server-Side Code <Launch />
             </Tool>
           </Link>
         </Technologies>

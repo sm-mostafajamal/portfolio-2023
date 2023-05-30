@@ -28,7 +28,7 @@ const Resume = styled.button`
   letter-spacing: 2px;
   cursor: pointer;
   &:hover {
-    background-color: white;
+    /* background-color: white; */
     color: black;
     transition: 0.5s all ease-in;
   }
@@ -129,7 +129,15 @@ const Home = () => {
   return (
     <Container mode={state.mode ? "black" : "#eae7dc"} id="home">
       <Header>
-        <Resume mode={state.mode ? "white" : "black"}>Resume</Resume>
+        <Resume>
+          <Link
+            href="./files/SM_Mostafa_Jamal_Resume.pdf"
+            download="SM_Mostafa_Jamal_Resume"
+            mode={state.mode ? "white" : "black"}
+          >
+            Resume
+          </Link>
+        </Resume>
         <Mode
           mode={state.mode ? "white" : "black"}
           onClick={() => modeDispatch({ type: "TOGGLE" })}
