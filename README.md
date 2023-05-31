@@ -6,7 +6,7 @@
 
 ## Optimizations
 
-My learning was focused on making a simple UI and a smooth UX, and have a seasonal animation for dark-mode.
+My learning was focused on making a simple UI and a smooth UX, and changing interface into dark-mode.
 
 ## Lessons Learned:
 
