@@ -13,7 +13,7 @@ const Container = styled.div`
   align-items: center;
 `;
 const Wrapper = styled.div`
-  height: 60vh;
+  height: 40vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -21,12 +21,14 @@ const Wrapper = styled.div`
 `;
 const Heading = styled.div``;
 const Subline = styled.p`
-  margin: 20px 0;
+  width: 50%;
+  margin: 20px auto;
   color: ${({ mode }) => mode};
-  font-size: 18px;
+  font-size: 24px;
+  text-align: center;
   ${devices.mobile({ fontSize: "15px" })}
 `;
-const Form = styled.form`
+const ContactMe = styled.a`
   height: 40vh;
   padding: 30px;
   border-radius: 10px;
@@ -36,26 +38,7 @@ const Form = styled.form`
   justify-content: space-around;
   align-items: center;
   ${devices.mobile({ padding: "20px" })}
-`;
-const Input = styled.input`
-  width: 90%;
-  padding: 15px;
-  margin: 5px auto;
-  border: none;
-  outline: none;
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.733);
-`;
-const Textarea = styled.textarea`
-  width: 90%;
-  padding: 15px;
-  margin: 5px auto;
-
-  resize: none;
-  border-radius: 5px;
-  outline: none;
-  border: none;
-  background-color: rgba(255, 255, 255, 0.733);
+  text-decoration: none;
 `;
 const Button = styled.button`
   width: 150px;
@@ -63,7 +46,7 @@ const Button = styled.button`
   border: 1px solid #d35100;
   background-color: transparent;
   color: #d35100;
-  font-size: 16px;
+  font-size: 20px;
   border-radius: 5px;
   margin-top: 20px;
   cursor: pointer;
@@ -78,29 +61,13 @@ const Contact = () => {
         <Heading>
           <Title title="Get in touch" />
           <Subline mode={state.mode ? "#ccd6f6" : "#d35100"}>
-            Feel free to Contact me by submitting the form below and I will get
-            back to you as soon as possible.
+            My inbox is always open. Whether you have a question or just want to
+            say hi, I’ll try my best to get back to you soon!
           </Subline>
         </Heading>
-        {/* <Form method="post" netlify netlify-honeypot="bot-field" hidden> */}
-        <Form
-          netlify
-          method="POST"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
-        >
-          <Input type="hidden" name="form-name" value="contact" />
-          <Input type="name" name="name" placeholder="Your Name" required />
-          <Input type="email" name="email" placeholder="Your Email" required />
-          <Textarea
-            name="message"
-            rows="5"
-            cols="30"
-            placeholder="Your Message"
-            required
-          />
-          <Button type="submit">SUBMIT</Button>
-        </Form>
+        <ContactMe href="mailto:sm.mostafajamal@pm.me">
+          <Button type="submit">Say Hello!</Button>
+        </ContactMe>
       </Wrapper>
       <SocialApps />
     </Container>

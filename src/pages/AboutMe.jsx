@@ -45,7 +45,9 @@ const Details = styled.div`
   ${devices.mobile({ fontSize: "16px" })}
   ${devices.tablet({ fontSize: "16px" })}
 `;
-const Article = styled.p``;
+const Article = styled.p`
+  font-size: 18px;
+`;
 const TechTitle = styled.span`
   font-size: 18px;
   font-weight: 400;
